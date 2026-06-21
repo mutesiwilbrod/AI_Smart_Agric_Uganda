@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Farm - AI Agriculture Super Platform</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="myfarm.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <i class="fa-solid fa-leaf logo-icon"></i>
+      <div>
+        <div class="logo-title">AI Agriculture</div>
+        <div class="logo-sub">Super Platform</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> Dashboard</a>
+      <a href="myfarm.html" class="nav-item active"><i class="fa-solid fa-seedling"></i> My Farm <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-robot"></i> AI Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-store"></i> Marketplace</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-cart-shopping"></i> Inputs Store</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-cow"></i> Livestock <i class="fa-solid fa-chevron-right nav-arrow"></i></a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-cloud-sun"></i> Weather</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-coins"></i> Finances <i class="fa-solid fa-chevron-right nav-arrow"></i></a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-truck"></i> Transport</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-comment-dots"></i> Messages <span class="badge">5</span></a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-graduation-cap"></i> Learn &amp; Grow</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-chart-column"></i> Reports</a>
+    </nav>
+
+    <div class="app-promo">
+      <div class="app-promo-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+      <div class="app-promo-text">
+        <strong>Get the mobile app</strong>
+        <span>Access all features on the go.</span>
+      </div>
+      <button class="btn-download">Download App</button>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <div class="main">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <button class="icon-btn menu-btn"><i class="fa-solid fa-bars"></i></button>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search anything...">
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn"><i class="fa-regular fa-sun"></i></button>
+        <button class="icon-btn notif-btn">
+          <i class="fa-regular fa-bell"></i>
+          <span class="notif-dot">3</span>
+        </button>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/40?img=12" alt="John Kato">
+          <div class="profile-text">
+            <strong>John Kato</strong>
+            <span>Farmer</span>
+          </div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <main class="content">
+
+      <!-- Page header -->
+      <div class="page-header">
+        <div>
+          <div class="breadcrumb"><a href="index.html">Dashboard</a> <i class="fa-solid fa-chevron-right"></i> <span>My Farm</span></div>
+          <h1>My Farm</h1>
+          <p>Manage your farm profile, crops, livestock and fields.</p>
+        </div>
+        <div class="page-actions">
+          <button class="btn btn-outline"><i class="fa-solid fa-pen"></i> Edit Farm Profile</button>
+          <button class="btn btn-green" id="openAddModalBtn"><i class="fa-solid fa-plus"></i> Add New</button>
+        </div>
+      </div>
+
+      <!-- Farm profile summary -->
+      <section class="card farm-profile-card">
+        <div class="farm-profile-image">
+          <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?q=80&w=1200&auto=format&fit=crop" alt="Kato Family Farm">
+          <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Farm</span>
+        </div>
+        <div class="farm-profile-body">
+          <div class="farm-profile-top">
+            <div>
+              <h2>Kato Family Farm</h2>
+              <p class="farm-location"><i class="fa-solid fa-location-dot"></i> Mukono, Uganda</p>
+            </div>
+            <div class="farm-rating">
+              <i class="fa-solid fa-star"></i>
+              <span>4.8</span>
+              <small>(126 reviews)</small>
+            </div>
+          </div>
+
+          <div class="farm-stats-row">
+            <div class="farm-stat">
+              <span class="fs-label">Farm Size</span>
+              <strong>25 Acres</strong>
+            </div>
+            <div class="farm-stat">
+              <span class="fs-label">Established</span>
+              <strong>2020</strong>
+            </div>
+            <div class="farm-stat">
+              <span class="fs-label">Total Fields</span>
+              <strong>4</strong>
+            </div>
+            <div class="farm-stat">
+              <span class="fs-label">Soil Type</span>
+              <strong>Loamy Clay</strong>
+            </div>
+            <div class="farm-stat">
+              <span class="fs-label">Farming Type</span>
+              <strong>Mixed Farming</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="crops">Crops <span class="tab-count">6</span></button>
+        <button class="tab-btn" data-tab="livestock">Livestock <span class="tab-count">12</span></button>
+        <button class="tab-btn" data-tab="fields">Fields &amp; Land <span class="tab-count">4</span></button>
+        <button class="tab-btn" data-tab="activity">Farm Activity</button>
+      </div>
+
+      <!-- CROPS TAB -->
+      <section class="tab-panel active" id="tab-crops">
+
+        <div class="filter-bar">
+          <div class="search-box small">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search crops...">
+          </div>
+          <select class="period-select">
+            <option>All Status</option>
+            <option>Healthy</option>
+            <option>Needs Attention</option>
+            <option>Harvested</option>
+          </select>
+          <select class="period-select">
+            <option>This Season</option>
+            <option>Last Season</option>
+          </select>
+        </div>
+
+        <div class="crop-grid">
+
+          <div class="crop-card">
+            <div class="crop-img" style="background-image:url('https://images.unsplash.com/photo-1601593768799-76276908d0a0?q=80&w=800&auto=format&fit=crop')">
+              <span class="status-pill status-healthy">Healthy</span>
+            </div>
+            <div class="crop-body">
+              <div class="crop-title-row">
+                <h3>Maize</h3>
+                <span class="crop-icon"><i class="fa-solid fa-wheat-awn"></i></span>
+              </div>
+              <p class="crop-field"><i class="fa-solid fa-map"></i> Field A - 8 Acres</p>
+              <div class="crop-progress">
+                <div class="progress-label"><span>Growth Stage</span><span>Flowering · 65%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:65%;background:#1d8f4e;"></div></div>
+              </div>
+              <div class="crop-meta-row">
+                <div><span>Planted</span><strong>12 Mar 2026</strong></div>
+                <div><span>Harvest Est.</span><strong>20 Jul 2026</strong></div>
+              </div>
+              <div class="crop-actions">
+                <button class="btn btn-light"><i class="fa-solid fa-eye"></i> View</button>
+                <button class="btn btn-light"><i class="fa-solid fa-camera"></i> Scan Disease</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="crop-card">
+            <div class="crop-img" style="background-image:url('https://images.unsplash.com/photo-1592841200221-a6898f307baa?q=80&w=800&auto=format&fit=crop')">
+              <span class="status-pill status-warning">Needs Attention</span>
+            </div>
+            <div class="crop-body">
+              <div class="crop-title-row">
+                <h3>Tomatoes</h3>
+                <span class="crop-icon"><i class="fa-solid fa-seedling"></i></span>
+              </div>
+              <p class="crop-field"><i class="fa-solid fa-map"></i> Field B - 3 Acres</p>
+              <div class="crop-progress">
+                <div class="progress-label"><span>Growth Stage</span><span>Fruiting · 80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:80%;background:#e0445e;"></div></div>
+              </div>
+              <div class="crop-meta-row">
+                <div><span>Planted</span><strong>02 Feb 2026</strong></div>
+                <div><span>Harvest Est.</span><strong>30 Jun 2026</strong></div>
+              </div>
+              <div class="crop-alert">
+                <i class="fa-solid fa-triangle-exclamation"></i> Early Blight detected - 5 hours ago
+              </div>
+              <div class="crop-actions">
+                <button class="btn btn-light"><i class="fa-solid fa-eye"></i> View</button>
+                <button class="btn btn-orange-outline"><i class="fa-solid fa-stethoscope"></i> Treat Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="crop-card">
+            <div class="crop-img" style="background-image:url('https://images.unsplash.com/photo-1623211616859-44e6cc52bbeb?q=80&w=800&auto=format&fit=crop')">
+              <span class="status-pill status-healthy">Healthy</span>
+            </div>
+            <div class="crop-body">
+              <div class="crop-title-row">
+                <h3>Beans</h3>
+                <span class="crop-icon"><i class="fa-solid fa-leaf"></i></span>
+              </div>
+              <p class="crop-field"><i class="fa-solid fa-map"></i> Field C - 4 Acres</p>
+              <div class="crop-progress">
+                <div class="progress-label"><span>Growth Stage</span><span>Vegetative · 40%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:40%;background:#1d8f4e;"></div></div>
+              </div>
+              <div class="crop-meta-row">
+                <div><span>Planted</span><strong>28 Apr 2026</strong></div>
+                <div><span>Harvest Est.</span><strong>15 Aug 2026</strong></div>
+              </div>
+              <div class="crop-actions">
+                <button class="btn btn-light"><i class="fa-solid fa-eye"></i> View</button>
+                <button class="btn btn-light"><i class="fa-solid fa-camera"></i> Scan Disease</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="crop-card">
+            <div class="crop-img" style="background-image:url('https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=800&auto=format&fit=crop')">
+              <span class="status-pill status-healthy">Healthy</span>
+            </div>
+            <div class="crop-body">
+              <div class="crop-title-row">
+                <h3>Bananas (Matooke)</h3>
+                <span class="crop-icon"><i class="fa-solid fa-leaf"></i></span>
+              </div>
+              <p class="crop-field"><i class="fa-solid fa-map"></i> Field D - 6 Acres</p>
+              <div class="crop-progress">
+                <div class="progress-label"><span>Growth Stage</span><span>Mature · 95%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:95%;background:#1d8f4e;"></div></div>
+              </div>
+              <div class="crop-meta-row">
+                <div><span>Planted</span><strong>10 Jan 2025</strong></div>
+                <div><span>Harvest Est.</span><strong>Ongoing</strong></div>
+              </div>
+              <div class="crop-actions">
+                <button class="btn btn-light"><i class="fa-solid fa-eye"></i> View</button>
+                <button class="btn btn-light"><i class="fa-solid fa-camera"></i> Scan Disease</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="crop-card">
+            <div class="crop-img" style="background-image:url('https://images.unsplash.com/photo-1551754655-cd27e38d2076?q=80&w=800&auto=format&fit=crop')">
+              <span class="status-pill status-healthy">Healthy</span>
+            </div>
+            <div class="crop-body">
+              <div class="crop-title-row">
+                <h3>Coffee</h3>
+                <span class="crop-icon"><i class="fa-solid fa-mug-hot"></i></span>
+              </div>
+              <p class="crop-field"><i class="fa-solid fa-map"></i> Field A - 2 Acres</p>
+              <div class="crop-progress">
+                <div class="progress-label"><span>Growth Stage</span><span>Berry Filling · 55%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:55%;background:#1d8f4e;"></div></div>
+              </div>
+              <div class="crop-meta-row">
+                <div><span>Planted</span><strong>05 Mar 2023</strong></div>
+                <div><span>Harvest Est.</span><strong>10 Oct 2026</strong></div>
+              </div>
+              <div class="crop-actions">
+                <button class="btn btn-light"><i class="fa-solid fa-eye"></i> View</button>
+                <button class="btn btn-light"><i class="fa-solid fa-camera"></i> Scan Disease</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add crop card -->
+          <div class="crop-card add-card" id="addCropCard">
+            <div class="add-card-inner">
+              <div class="add-icon"><i class="fa-solid fa-plus"></i></div>
+              <strong>Add New Crop</strong>
+              <span>Register a new crop on your farm</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- LIVESTOCK TAB -->
+      <section class="tab-panel" id="tab-livestock">
+
+        <div class="filter-bar">
+          <div class="search-box small">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search livestock...">
+          </div>
+          <select class="period-select">
+            <option>All Types</option>
+            <option>Cattle</option>
+            <option>Goats</option>
+            <option>Poultry</option>
+          </select>
+          <select class="period-select">
+            <option>All Health Status</option>
+            <option>Healthy</option>
+            <option>Sick</option>
+            <option>Under Treatment</option>
+          </select>
+        </div>
+
+        <div class="livestock-table-wrap card">
+          <table class="livestock-table">
+            <thead>
+              <tr>
+                <th>Animal</th>
+                <th>Tag ID</th>
+                <th>Breed</th>
+                <th>Age</th>
+                <th>Health</th>
+                <th>Last Checkup</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="animal-cell"><span class="animal-emoji">🐄</span> Dairy Cattle</td>
+                <td>UG-COW-014</td>
+                <td>Friesian</td>
+                <td>3 yrs</td>
+                <td><span class="health-pill health-good">Healthy</span></td>
+                <td>12 Jun 2026</td>
+                <td><button class="btn btn-light btn-sm">View</button></td>
+              </tr>
+              <tr>
+                <td class="animal-cell"><span class="animal-emoji">🐄</span> Dairy Cattle</td>
+                <td>UG-COW-015</td>
+                <td>Ankole</td>
+                <td>5 yrs</td>
+                <td><span class="health-pill health-good">Healthy</span></td>
+                <td>12 Jun 2026</td>
+                <td><button class="btn btn-light btn-sm">View</button></td>
+              </tr>
+              <tr>
+                <td class="animal-cell"><span class="animal-emoji">🐐</span> Goat</td>
+                <td>UG-GT-031</td>
+                <td>Boer</td>
+                <td>1.5 yrs</td>
+                <td><span class="health-pill health-warning">Under Treatment</span></td>
+                <td>18 Jun 2026</td>
+                <td><button class="btn btn-light btn-sm">View</button></td>
+              </tr>
+              <tr>
+                <td class="animal-cell"><span class="animal-emoji">🐐</span> Goat</td>
+                <td>UG-GT-032</td>
+                <td>Boer</td>
+                <td>2 yrs</td>
+                <td><span class="health-pill health-good">Healthy</span></td>
+                <td>10 Jun 2026</td>
+                <td><button class="btn btn-light btn-sm">View</button></td>
+              </tr>
+              <tr>
+                <td class="animal-cell"><span class="animal-emoji">🐔</span> Poultry (Layers)</td>
+                <td>UG-PLT-200</td>
+                <td>Kuroiler</td>
+                <td>8 months</td>
+                <td><span class="health-pill health-good">Healthy</span></td>
+                <td>15 Jun 2026</td>
+                <td><button class="btn btn-light btn-sm">View</button></td>
+              </tr>
+              <tr>
+                <td class="animal-cell"><span class="animal-emoji">🐖</span> Pig</td>
+                <td>UG-PIG-007</td>
+                <td>Camborough</td>
+                <td>10 months</td>
+                <td><span class="health-pill health-bad">Sick</span></td>
+                <td>20 Jun 2026</td>
+                <td><button class="btn btn-light btn-sm">View</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- FIELDS TAB -->
+      <section class="tab-panel" id="tab-fields">
+        <div class="field-grid">
+          <div class="field-card">
+            <div class="field-card-head">
+              <h3>Field A</h3>
+              <span class="field-size">10 Acres</span>
+            </div>
+            <p class="field-crops"><i class="fa-solid fa-seedling"></i> Maize, Coffee</p>
+            <p class="field-soil"><i class="fa-solid fa-mound"></i> Loamy Clay Soil</p>
+            <div class="field-bar"><div class="field-fill" style="width:80%"></div></div>
+            <span class="field-status">80% Utilized</span>
+          </div>
+          <div class="field-card">
+            <div class="field-card-head">
+              <h3>Field B</h3>
+              <span class="field-size">3 Acres</span>
+            </div>
+            <p class="field-crops"><i class="fa-solid fa-seedling"></i> Tomatoes</p>
+            <p class="field-soil"><i class="fa-solid fa-mound"></i> Sandy Loam Soil</p>
+            <div class="field-bar"><div class="field-fill" style="width:100%"></div></div>
+            <span class="field-status">100% Utilized</span>
+          </div>
+          <div class="field-card">
+            <div class="field-card-head">
+              <h3>Field C</h3>
+              <span class="field-size">4 Acres</span>
+            </div>
+            <p class="field-crops"><i class="fa-solid fa-seedling"></i> Beans</p>
+            <p class="field-soil"><i class="fa-solid fa-mound"></i> Clay Soil</p>
+            <div class="field-bar"><div class="field-fill" style="width:60%"></div></div>
+            <span class="field-status">60% Utilized</span>
+          </div>
+          <div class="field-card">
+            <div class="field-card-head">
+              <h3>Field D</h3>
+              <span class="field-size">6 Acres</span>
+            </div>
+            <p class="field-crops"><i class="fa-solid fa-seedling"></i> Bananas</p>
+            <p class="field-soil"><i class="fa-solid fa-mound"></i> Loamy Soil</p>
+            <div class="field-bar"><div class="field-fill" style="width:90%"></div></div>
+            <span class="field-status">90% Utilized</span>
+          </div>
+          <div class="field-card add-field-card">
+            <div class="add-icon"><i class="fa-solid fa-plus"></i></div>
+            <strong>Add New Field</strong>
+            <span>Map a new field or plot</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACTIVITY TAB -->
+      <section class="tab-panel" id="tab-activity">
+        <div class="card">
+          <ul class="farm-timeline">
+            <li><span class="tl-dot tl-green"></span><div><strong>Maize fertilizer applied</strong><span>Field A · Today, 8:30 AM</span></div></li>
+            <li><span class="tl-dot tl-red"></span><div><strong>Disease scan: Early Blight detected in Tomatoes</strong><span>Field B · 5 hours ago</span></div></li>
+            <li><span class="tl-dot tl-blue"></span><div><strong>Irrigation scheduled before rainfall</strong><span>Field C · Yesterday</span></div></li>
+            <li><span class="tl-dot tl-purple"></span><div><strong>Goat UG-GT-031 started treatment</strong><span>Livestock · 2 days ago</span></div></li>
+            <li><span class="tl-dot tl-green"></span><div><strong>Beans planting completed</strong><span>Field C · 28 Apr 2026</span></div></li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <span>© 2024 AI Agriculture Super Platform. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <span>|</span>
+        <a href="#">Terms of Service</a>
+        <span>|</span>
+        <a href="#">Help Center</a>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<!-- Add Crop Modal -->
+<div class="modal-overlay" id="addModalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Add New Crop</h3>
+      <button class="modal-close" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <form class="modal-body" id="addCropForm">
+      <label>Crop Name
+        <input type="text" placeholder="e.g. Maize" required>
+      </label>
+      <div class="form-row">
+        <label>Field
+          <select>
+            <option>Field A</option>
+            <option>Field B</option>
+            <option>Field C</option>
+            <option>Field D</option>
+          </select>
+        </label>
+        <label>Area (Acres)
+          <input type="number" placeholder="e.g. 5" min="0" step="0.1">
+        </label>
+      </div>
+      <div class="form-row">
+        <label>Planting Date
+          <input type="date">
+        </label>
+        <label>Expected Harvest
+          <input type="date">
+        </label>
+      </div>
+      <label>Notes
+        <textarea rows="3" placeholder="Any additional notes about this crop..."></textarea>
+      </label>
+    </form>
+    <div class="modal-footer">
+      <button class="btn btn-light" id="cancelModalBtn">Cancel</button>
+      <button class="btn btn-green" id="saveCropBtn"><i class="fa-solid fa-check"></i> Save Crop</button>
+    </div>
+  </div>
+</div>
+
+<script src="myfarm.js"></script>
+</body>
+</html>
