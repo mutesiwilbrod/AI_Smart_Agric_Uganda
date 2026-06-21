@@ -1,7 +1,316 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agriculture Super Platform</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <i class="fa-solid fa-leaf logo-icon"></i>
+      <div>
+        <div class="logo-title">AI Agriculture</div>
+        <div class="logo-sub">Super Platform</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i> Dashboard</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-seedling"></i> My Farm <i class="fa-solid fa-chevron-right nav-arrow"></i></a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-robot"></i> AI Services <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-store"></i> Marketplace</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-cart-shopping"></i> Inputs Store</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-cow"></i> Livestock <i class="fa-solid fa-chevron-right nav-arrow"></i></a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-cloud-sun"></i> Weather</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-coins"></i> Finances <i class="fa-solid fa-chevron-right nav-arrow"></i></a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-truck"></i> Transport</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-comment-dots"></i> Messages <span class="badge">5</span></a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-graduation-cap"></i> Learn &amp; Grow</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-chart-column"></i> Reports</a>
+    </nav>
+
+    <div class="app-promo">
+      <div class="app-promo-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+      <div class="app-promo-text">
+        <strong>Get the mobile app</strong>
+        <span>Access all features on the go.</span>
+      </div>
+      <button class="btn-download">Download App</button>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <div class="main">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <button class="icon-btn menu-btn"><i class="fa-solid fa-bars"></i></button>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search anything...">
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn"><i class="fa-regular fa-sun"></i></button>
+        <button class="icon-btn notif-btn">
+          <i class="fa-regular fa-bell"></i>
+          <span class="notif-dot">3</span>
+        </button>
+        <div class="profile">
+          <img src="https://i.pravatar.cc/40?img=12" alt="John Kato">
+          <div class="profile-text">
+            <strong>Musa</strong>
+            <span>Farmer</span>
+          </div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <main class="content">
+
+      <div class="welcome">
+        <h1>Welcome back, John! <span class="wave">👋</span></h1>
+        <p>Here's what's happening on your farm today.</p>
+      </div>
+
+      <!-- Stat cards -->
+      <section class="stats-grid">
+        <div class="stat-card stat-green">
+          <div class="stat-icon"><i class="fa-solid fa-seedling"></i></div>
+          <div class="stat-label">Total Crops</div>
+          <div class="stat-value">6</div>
+          <div class="stat-sub">Active this season</div>
+        </div>
+        <div class="stat-card stat-blue">
+          <div class="stat-icon"><i class="fa-solid fa-cow"></i></div>
+          <div class="stat-label">Livestock</div>
+          <div class="stat-value">12</div>
+          <div class="stat-sub">Healthy animals</div>
+        </div>
+        <div class="stat-card stat-orange">
+          <div class="stat-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+          <div class="stat-label">Market Orders</div>
+          <div class="stat-value">3</div>
+          <div class="stat-sub">Pending orders</div>
+        </div>
+        <div class="stat-card stat-purple">
+          <div class="stat-icon"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+          <div class="stat-label">Weather</div>
+          <div class="stat-value">24°C</div>
+          <div class="stat-sub">Partly Cloudy</div>
+        </div>
+        <div class="stat-card stat-red">
+          <div class="stat-icon"><i class="fa-solid fa-wallet"></i></div>
+          <div class="stat-label">Account Balance</div>
+          <div class="stat-value">UGX 1,250,000</div>
+          <div class="stat-sub">Available Balance</div>
+        </div>
+      </section>
+
+      <!-- Farm overview + AI recommendations -->
+      <section class="two-col">
+        <div class="card farm-overview">
+          <div class="card-header">
+            <h2>Farm Overview</h2>
+            <a href="#" class="link">View Details</a>
+          </div>
+          <div class="farm-image">
+            <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?q=80&w=1200&auto=format&fit=crop" alt="Farm field">
+          </div>
+          <div class="farm-meta">
+            <div>
+              <span class="meta-label">Farm Name</span>
+              <strong>Kato Family Farm</strong>
+            </div>
+            <div>
+              <span class="meta-label">Location</span>
+              <strong>Mukono, Uganda</strong>
+            </div>
+            <div>
+              <span class="meta-label">Farm Size</span>
+              <strong>25 Acres</strong>
+            </div>
+            <div>
+              <span class="meta-label"><i class="fa-regular fa-clock"></i> Since</span>
+              <strong>2020</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="card ai-recommendations">
+          <div class="card-header">
+            <h2>AI Recommendations</h2>
+            <a href="#" class="link">View All</a>
+          </div>
+
+          <div class="rec-item">
+            <div class="rec-icon rec-green"><i class="fa-solid fa-seedling"></i></div>
+            <div class="rec-text">
+              <strong>Fertilizer Recommendation</strong>
+              <p>Apply NPK 17:17:17 for your Maize crop in the next 7 days.</p>
+            </div>
+            <button class="btn btn-green">View Details</button>
+          </div>
+
+          <div class="rec-item">
+            <div class="rec-icon rec-red"><i class="fa-solid fa-shield-virus"></i></div>
+            <div class="rec-text">
+              <strong>Disease Alert</strong>
+              <p>Possible Maize Streak Virus detected in your area.</p>
+            </div>
+            <button class="btn btn-orange">Check Now</button>
+          </div>
+
+          <div class="rec-item">
+            <div class="rec-icon rec-blue"><i class="fa-solid fa-cloud-rain"></i></div>
+            <div class="rec-text">
+              <strong>Weather Alert</strong>
+              <p>Heavy rainfall expected in 2 days. Plan your farm activities.</p>
+            </div>
+            <button class="btn btn-blue">See Forecast</button>
+          </div>
+
+          <div class="rec-item">
+            <div class="rec-icon rec-yellow"><i class="fa-solid fa-arrow-trend-up"></i></div>
+            <div class="rec-text">
+              <strong>Market Opportunity</strong>
+              <p>Maize prices expected to rise by 12% in the next 2 weeks.</p>
+            </div>
+            <button class="btn btn-green">View Market</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chart + Quick actions + Recent activities -->
+      <section class="three-col">
+
+        <div class="card chart-card">
+          <div class="card-header">
+            <h2>Market Price Trends (UGX)</h2>
+            <select class="period-select">
+              <option>This Week</option>
+              <option>This Month</option>
+              <option>This Year</option>
+            </select>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="priceChart"></canvas>
+          </div>
+        </div>
+
+        <div class="card quick-actions">
+          <div class="card-header">
+            <h2>Quick Actions</h2>
+          </div>
+          <div class="actions-grid">
+            <button class="action-btn action-green">
+              <i class="fa-solid fa-stethoscope"></i>
+              <span>AI Crop Doctor</span>
+            </button>
+            <button class="action-btn action-blue">
+              <i class="fa-solid fa-cow"></i>
+              <span>Livestock Doctor</span>
+            </button>
+            <button class="action-btn action-orange">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Sell Produce</span>
+            </button>
+            <button class="action-btn action-purple">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span>Buy Inputs</span>
+            </button>
+            <button class="action-btn action-blue">
+              <i class="fa-solid fa-cloud-sun"></i>
+              <span>Weather Forecast</span>
+            </button>
+            <button class="action-btn action-green">
+              <i class="fa-solid fa-truck"></i>
+              <span>Request Transport</span>
+            </button>
+            <button class="action-btn action-purple">
+              <i class="fa-solid fa-building-columns"></i>
+              <span>Apply for Loan</span>
+            </button>
+            <button class="action-btn action-orange">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Insurance</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="card recent-activities">
+          <div class="card-header">
+            <h2>Recent Activities</h2>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon act-green"><i class="fa-solid fa-seedling"></i></div>
+            <div class="activity-text">
+              <strong>You listed Maize for sale</strong>
+              <span>2 hours ago</span>
+            </div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon act-red"><i class="fa-solid fa-droplet"></i></div>
+            <div class="activity-text">
+              <strong>AI detected Early Blight in Tomatoes</strong>
+              <span>5 hours ago</span>
+            </div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon act-blue"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+            <div class="activity-text">
+              <strong>Weather alert for heavy rain</strong>
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon act-green"><i class="fa-solid fa-sack-dollar"></i></div>
+            <div class="activity-text">
+              <strong>Payment received from Buyer</strong>
+              <span>1 day ago</span>
+            </div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon act-purple"><i class="fa-solid fa-cow"></i></div>
+            <div class="activity-text">
+              <strong>Veterinary consultation completed</strong>
+              <span>2 days ago</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <span>© 2024 AI Agriculture Super Platform. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <span>|</span>
+        <a href="#">Terms of Service</a>
+        <span>|</span>
+        <a href="#">Help Center</a>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="script.js"></script>
 </body>
+</html>
